@@ -15,11 +15,11 @@ public class App {
 
     public static void main(String[] args) throws Exception {
         int option;
+        boolean option1selec = false;
+        boolean option2selec = false;
         do {
             mostrarMenu();
             option = scanner.nextInt();
-            boolean option1selec = false;
-            boolean option2selec = false;
             switch (option) {
                 case 1:
                     seleccionarPlaneta();
@@ -30,7 +30,7 @@ public class App {
                     option2selec = true;
                     break;
                 case 3:
-                    if (option1selec && option2selec) {
+                    if ((option1selec && option2selec) == true ) {
                         iniciarSimulacion();
                     } else {
                         System.out.println("Debe seleccionar primero las opciones 1 y 2 antes de iniciar la simulación.");
